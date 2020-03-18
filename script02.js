@@ -1,4 +1,3 @@
-
 const generateButton = document.getElementById('generateBtn')
 generateButton.addEventListener('click', writePassword)
 
@@ -19,9 +18,10 @@ var nums = ["1","2","3","4","5","6","7","8","9","0"]
 
 passLength = prompt("pick a # between 8 and 128 please")
 
-var trueLength = passLength / 4;
 var selectedChoices = 4;
-console.log(trueLength);
+// var trueLength = passLength / selectedChoices;
+
+console.log(selectedChoices);
 
 
 var doSmalls = confirm("Do you want lowercase letters in your Password?")
@@ -38,10 +38,47 @@ function passGen(arr) {
     }
 }
 
+if (!doSmalls) {
+    // passGen(smalls);
+    selectedChoices--
+}
+if (!doLarge) {
+    // passGen(Large);
+    selectedChoices--
+}
+if (!doSpecialChar) {
+    // passGen(specialChar);
+    selectedChoices--
+}
+if (!doNums) {
+    // passGen(nums);
+    selectedChoices--
+}
 
-    passGen(smalls);
+var trueLength = passLength / selectedChoices;
+
+
+if (doSmalls) {
+    passGen(smalls); 
+}
+if (doLarge) {
     passGen(Large);
+}
+if (doSpecialChar) {
     passGen(specialChar);
+}
+if (doNums) {
     passGen(nums);
+}
+
+
+
+
+
+
+    // passGen(smalls);
+    // passGen(Large);
+    // passGen(specialChar);
+    // passGen(nums);
 
 // document.write(newPass);
