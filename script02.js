@@ -4,8 +4,12 @@ generateButton.addEventListener('click', writePassword)
 
 
 function writePassword() {
-    var passwordNow = newPass
+    
+    var passwordNow = newPass.join("");
     var passwordText = document.querySelector("#password");
+
+    // var x = document.getElementById("#password")
+    // x.innerHTML = newPass.join("");
 
     passwordText.value = passwordNow;
 } 
