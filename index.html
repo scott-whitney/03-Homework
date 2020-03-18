@@ -2,48 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Document</title>
+
 </head>
 <body>
-    <script type="text/javascript">
-
-var newPass = [];
-var smalls = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m",];
-var Large = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M",];
-var specialChar = ["#","!","@","$","%"]
-var nums = ["1","2","3","4","5","6","7","8","9","0"]
-
-
-
-
-
-passLength = prompt("pick a # between 8 and 128 please")
-
-var trueLength = passLength / 4;
-
-
-
-function passGen(arr) {
-
-    for (var i = 0; i < trueLength; i++) {
-        var numnum = Math.floor(Math.random() * arr.length); 
-        newPass.push(arr[numnum])
-
-    }
-}
-
-
-    passGen(smalls);
-    passGen(Large);
-    passGen(specialChar);
-    passGen(nums);
-
-document.write(newPass);
-
-    </script>
-
-
-
+    <!-- card -->
+ 
+    <div class="card text-center">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Password Generator</h5>
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+          <p class="card-text">Please remember to never share your password with anyone.</p>
+          <a id="generateBtn" class="btn btn-primary">Generate Password</a>
+        </div>
+        <div class="card-footer text-muted">
+          Have a safe day!
+        </div>
+      </div>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
