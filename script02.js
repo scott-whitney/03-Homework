@@ -42,7 +42,7 @@ function genPass() {
 
     function passGen(arr) {
 
-        for (var i = 0; i < trueLength; i++) {
+        for (; newPass.length < passLength;) {
         var numnum = Math.floor(Math.random() * arr.length); 
         newPass.push(arr[numnum])
 
