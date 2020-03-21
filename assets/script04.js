@@ -15,21 +15,17 @@ var specialChar = ["#","!","@","$","%"]
 var nums = ["1","2","3","4","5","6","7","8","9","0"]
 function WrapperTrigger() {
     writePassword()
-    //  TestGeneratorWrapItUp()
+
      var passwordNow = TestGeneratorWrapItUp();
-     // var passwordNew = passwordNow.join("");
-     // var passwordNow = newPass.join("");
+
      var passwordText = document.querySelector("#password");
- 
-     // var x = document.getElementById("#password")
-     // x.innerHTML = newPass.join("");
- 
+
      passwordText.value = passwordNow;
 
     function writePassword() {
 
         userPrompts()
-        // TestGeneratorObject();
+
         var passwordNow = TestGeneratorObject();
     
     
@@ -115,7 +111,7 @@ function WrapperTrigger() {
     function specialCharacters() {
        var specialCharsArray = [];
         for (i = 0; i < userLength; i++)
-            // if (userLarge === true)
+
             {
                 var numnum = Math.floor(Math.random() * specialChar.length); 
                 specialCharsArray.push(specialChar[numnum])
@@ -133,7 +129,7 @@ function WrapperTrigger() {
             newPassFour.push(numericalOnes)
             counter++
         } else {
-            // TestGeneratorWrapItUp()
+
         }
     }
     function numbersTime() {
@@ -145,138 +141,16 @@ function WrapperTrigger() {
          
             }
     
-            // TestGeneratorWrapItUp();
+
             return numbersArrayT;
     }
 }
-// function writePassword() {
 
-//     userPrompts()
-//     // TestGeneratorObject();
-//     var passwordNow = TestGeneratorObject();
-
-
-//     var passwordText = document.querySelector("#password");
-//     passwordText.value = passwordNow;
-// } 
-
-
-
-
-// function userPrompts() {
-//     userLength = prompt("Please pick a # between 8 and 128")
-//     if (userLength < 8 || userLength > 128){
-//         alert("Please enter a viable option")
-//     } else {
-
-//      userSmalls = confirm("Do you want lowercase letters?")
-//      userLarge = confirm("DO you want Uppercase Letters?")
-//      userSpecial = confirm("Do you want special characters?")
-//      userNums = confirm("Do you want numbers?")
-
-
-//     }
-// }
-// function TestGeneratorObject(){
-//     if (userSmalls){
-//         littleOnes = smallLetters()
-//         newPassOne.push(littleOnes);
-//         counter++
-//     } else {
-//         TestGeneratorPart2();
-//     }
-// }
-
-// function smallLetters() {
-    
-// var smallLettersArray = [];
-//     for (i = 0; i < userLength; i++)
-//         {
-//             var numnum = Math.floor(Math.random() * smalls.length); 
-//             smallLettersArray.push(smalls[numnum])
-      
-//         }
-
-
-
-//         TestGeneratorPart2();
-//         return smallLettersArray;
-
-// }
-
-// function TestGeneratorPart2() {
-//     if (userLarge){
-//         bigOnes = UpperCases()
-//         newPassTwo.push(bigOnes)
-//         counter++
-//     } else {
-//         TestGeneratorPart3()
-//     }
-// }
-
-// function UpperCases() {
-//   var  UpperLettersArray = [];
-//     for (i = 0; i < userLength; i++) {
-//             var numnum = Math.floor(Math.random() * Large.length); 
-//             UpperLettersArray.push(Large[numnum])
-         
-//     }
-
-//         TestGeneratorPart3();
-//         return UpperLettersArray;
-// }
-
-// function TestGeneratorPart3() {
-//     if (userSpecial){
-//         specialOnes = specialCharacters()
-//         newPassThree.push(specialOnes)
-//         counter++
-//     } else {
-//         TestGeneratorPart4()
-//     }
-// }
-// function specialCharacters() {
-//    var specialCharsArray = [];
-//     for (i = 0; i < userLength; i++)
-//         // if (userLarge === true)
-//         {
-//             var numnum = Math.floor(Math.random() * specialChar.length); 
-//             specialCharsArray.push(specialChar[numnum])
-      
-//         }
-
-
-//         TestGeneratorPart4();
-//         return specialCharsArray;
-// }
-
-// function TestGeneratorPart4() {
-//     if (userNums) {
-//         numericalOnes = numbersTime()
-//         newPassFour.push(numericalOnes)
-//         counter++
-//     } else {
-//         TestGeneratorWrapItUp()
-//     }
-// }
-// function numbersTime() {
-//   var  numbersArrayT = [];
-//     for (i = 0; i < userLength; i++)
-//        {
-//             var numnum = Math.floor(Math.random() * nums.length); 
-//             numbersArrayT.push(nums[numnum])
-     
-//         }
-
-//         TestGeneratorWrapItUp();
-//         return numbersArrayT;
-// }
 function TestGeneratorWrapItUp() {
 fuckingPlease = newPassOne.concat(newPassTwo, newPassThree, newPassFour);
 console.log(fuckingPlease);
-    // var FuckingPlease = newPass.concat(littleOnes, )
-    // console.log(specialOnes)
-    // var trueNewPass = [];
+// excuse the language it is past midnight and its been a struggle
+// especially considering that with this method I needed to learn var ordering
     for(i = 0; i < userLength; i++)
     {
         var numnum = Math.floor(Math.random() * nums.length); 
