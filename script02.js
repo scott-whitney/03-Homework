@@ -21,7 +21,7 @@ function writePassword() {
 function genPass() {
 
 
-    var newPass = [];
+     newPass = [];
     var smalls = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m",];
     var Large = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M",];
     var specialChar = ["#","!","@","$","%"]
@@ -30,7 +30,7 @@ function genPass() {
     passLength = prompt("pick a # between 8 and 128 please")
 
     var selectedChoices = 4;
-// var trueLength = passLength / selectedChoices;
+    trueLength = passLength / selectedChoices;
 
     console.log(selectedChoices);
 
@@ -40,14 +40,15 @@ function genPass() {
     var doSpecialChar = confirm("Do you want special characters in your new password?")
     var doNums = confirm("Do you want numbers in your new password?") 
 
-    function passGen(arr) {
+    // function passGen(arr) {
 
-        for (; newPass.length < passLength;) {
-        var numnum = Math.floor(Math.random() * arr.length); 
-        newPass.push(arr[numnum])
+    //     for (; newPass.length < passLength;) {
+    //     var numnum = Math.floor(Math.random() * arr.length); 
+    //     newPass.push(arr[numnum])
 
-        }
-    }
+
+    //     }
+    // }
 
     if (!doSmalls) {
     // passGen(smalls);
@@ -66,7 +67,7 @@ function genPass() {
     selectedChoices--
     }
 
-    var trueLength = passLength / selectedChoices;
+    // trueLength = passLength / selectedChoices;
 
 
     if (doSmalls) {
@@ -80,6 +81,16 @@ function genPass() {
     }
     if (doNums) {
     passGen(nums);
+    }
+
+    function passGen(arr) {
+
+        for (; trueLength < passLength;) {
+        var numnum = Math.floor(Math.random() * arr.length); 
+        newPass.push(arr[numnum])
+
+
+        }
     }
 
     
